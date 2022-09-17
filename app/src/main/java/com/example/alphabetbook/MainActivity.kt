@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         // i.e., when any alphabet button is clicked
         alphabetGrid.setOnItemClickListener { _, _, i, _ ->
             val intent = Intent(applicationContext, AlphabetActivity::class.java)
-            intent.putExtra("name", alphabets[i])
+            intent.putExtra("letter", alphabets[i])
             startActivity(intent)
         }
     }
