@@ -40,4 +40,10 @@ class AlphabetPresenter (_intent: Intent, _context: Context) {
         val currentChar: Char = alphabet[0]
         return if (currentChar == 65.toChar()) 90.toChar() else (currentChar - 1)
     }
+
+    // Finds the next alphabet
+    fun getNextAlpha(): Char {
+        val currentChar: Char = alphabet[0]
+        return if (currentChar == 90.toChar()) 65.toChar() else (currentChar + 1)
+    }
 }
