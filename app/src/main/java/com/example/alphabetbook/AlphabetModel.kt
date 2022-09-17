@@ -5,7 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.widget.ImageView
 
-class AlphabetModel(_image: String, _imageView: ImageView, _resources: Resources, _packageName: String): Thread() {
+class LoadInBackground(_image: String, _imageView: ImageView, _resources: Resources, _packageName: String): Thread() {
     private var imageName = _image
     private var imageView = _imageView
     private var resources = _resources
@@ -16,8 +16,14 @@ class AlphabetModel(_image: String, _imageView: ImageView, _resources: Resources
         var bitmap = BitmapFactory.decodeResource(resources, id)
         imageView.setImageBitmap(bitmap)
     }
+}
+class AlphabetModel(_image: String, _imageView: ImageView, _resources: Resources, _packageName: String): Thread() {
+    private var imageName = _image
+    private var imageView = _imageView
+    private var resources = _resources
+    private var packageName = _packageName
 
     fun loadImage() {
-        start()
+        LoadInBackground(imageName, imageView, resources, packageName).start()
     }
 }
