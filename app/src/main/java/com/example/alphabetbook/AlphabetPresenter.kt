@@ -21,7 +21,7 @@ class AlphabetPresenter (_intent: Intent, _context: Context) {
 
     // Load image
     fun loadImage(imageView: ImageView, resources: Resources, packageName: String) {
-        val model = AlphabetModel(alphabet, imageView, resources, packageName)
+        val model = AlphabetModel(alphabet.lowercase(), imageView, resources, packageName)
         model.loadImage()
     }
 }
