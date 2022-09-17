@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         // find grid view items, i.e., alphabet buttons
-        val gridView = findViewById<GridView>(R.id.gridView)
+        val alphabetGrid = findViewById<GridView>(R.id.gridView)
 
         // set the adapter of gridview to buttons
-        gridView.adapter = object : ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, alphabets) {
+        alphabetGrid.adapter = object : ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, alphabets) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
                 return (super.getView(position, convertView, parent) as TextView)
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
         // handle what to do when the grid view item is clicked
         // i.e., when any alphabet button is clicked
-        gridView.setOnItemClickListener { _, _, i, _ ->
+        alphabetGrid.setOnItemClickListener { _, _, i, _ ->
             val intent = Intent(applicationContext, AlphabetActivity::class.java)
             intent.putExtra("name", alphabets[i])
             startActivity(intent)
