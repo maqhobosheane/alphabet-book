@@ -3,6 +3,7 @@ package com.example.alphabetbook
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 
@@ -23,5 +24,14 @@ class AlphabetPresenter (_intent: Intent, _context: Context) {
     fun loadImage(imageView: ImageView, resources: Resources, packageName: String) {
         val model = AlphabetModel(alphabet.lowercase(), imageView, resources, packageName)
         model.loadImage()
+    }
+
+    // Add click listener
+    fun addClickListener(button: Button, letter: String, startActivity: (intent: Intent) -> Unit) {
+        button.setOnClickListener {
+            var intent = Intent(context, AlphabetActivity::class.java)
+            intent.putExtra("letter", letter)
+            startActivity(intent)
+        }
     }
 }
