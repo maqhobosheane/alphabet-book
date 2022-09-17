@@ -34,4 +34,10 @@ class AlphabetPresenter (_intent: Intent, _context: Context) {
             startActivity(intent)
         }
     }
+
+    // Finds the previous alphabet
+    fun getPrevAlpha(): Char {
+        val currentChar: Char = alphabet[0]
+        return if (currentChar == 65.toChar()) 90.toChar() else (currentChar - 1)
+    }
 }
