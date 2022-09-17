@@ -30,7 +30,10 @@ class AlphabetActivity : AppCompatActivity() {
         val prevChar = presenter.getPrevAlpha()
         presenter.addClickListener(prevButton, prevChar.toString(), ::startActivity)
 
-
+        // Next button
+        val nextButton = findViewById<Button>(R.id.next)
+        val nextChar = presenter.getNextAlpha()
+        presenter.addClickListener(nextButton, nextChar.toString(), ::startActivity)
 
 
 
