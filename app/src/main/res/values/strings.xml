@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Alphabet Book</string>
+
+    <!-- Strings for buttons -->
+    <string name="first_page">A</string>
+    <string name="last_page">Z</string>
+    <string name="previous">&#60;&#60;Prev</string>
+    <string name="next">Next&#62;&#62;</string>
+    <string name="overview">Overview</string>
+
+    <!-- Image view content description -->
+    <string name="alphabet_description">Picture showing alphabet</string>
 </resources>
