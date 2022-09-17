@@ -23,10 +23,11 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="50dp"
-            android:contentDescription="TODO"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            android:layout_height="361dp"
+            android:layout_marginTop="100dp"
+            android:contentDescription="@string/alphabet_description"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="ImageContrastCheck" />
 
         <LinearLayout
             android:id="@+id/buttonLayout"
@@ -41,31 +42,35 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:layout_marginRight="5dp"
-                android:text="B" />
+                android:layout_marginEnd="5dp"
+                android:text="@string/first_page"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/previous"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:layout_marginRight="5dp"
-                android:text="Button" />
+                android:layout_marginEnd="5dp"
+                android:text="@string/previous"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/next"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:layout_marginRight="5dp"
-                android:text="Button" />
+                android:layout_marginEnd="5dp"
+                android:text="@string/next"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/lastPage"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="B" />
+                android:text="@string/last_page"
+                tools:ignore="ButtonStyle" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
